@@ -17,29 +17,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="77" id="rPr-RB-0NS">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="77" id="rPr-RB-0NS">
                                 <rect key="frame" x="0.0" y="28" width="414" height="77"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rPr-RB-0NS" id="XhC-dH-YKq">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="77"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="77"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="sheet title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIe-EQ-eYy">
-                                            <rect key="frame" x="33" y="19" width="94" height="24"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="제목 없는 스프레드시트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIe-EQ-eYy">
+                                            <rect key="frame" x="33" y="19" width="182" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2020.12.01 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5v-G4-yXw">
-                                            <rect key="frame" x="34" y="47" width="79" height="18"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="작성일자" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5v-G4-yXw">
+                                            <rect key="frame" x="34" y="47" width="52" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" systemColor="systemGrayColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="마지막 수정한 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POk-PN-8Cz">
-                                            <rect key="frame" x="267" y="28" width="127" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="마지막 수정자" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POk-PN-8Cz">
+                                            <rect key="frame" x="267" y="28" width="93" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -57,12 +57,41 @@
                     <navigationItem key="navigationItem" title="Sheet List" id="WrN-dV-ONv">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="9IV-DZ-7AP">
                             <color key="tintColor" red="0.17231217030000001" green="0.44624298810000002" blue="0.1253960133" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="hzo-e6-C2y" kind="presentation" modalPresentationStyle="fullScreen" id="ZAD-iv-sNj"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgo-ZF-8Bq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-507.24637681159425" y="1384.8214285714284"/>
+            <point key="canvasLocation" x="-841" y="577"/>
+        </scene>
+        <!--new sheet-->
+        <scene sceneID="G2w-DX-q76">
+            <objects>
+                <viewController id="ZDi-pS-wCY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="36n-o9-qYH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="SDy-6K-aIr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="new sheet" id="Hd1-AN-uVg">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="5Lc-o7-Sdf"/>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Col +" id="0Aj-Ze-Mep">
+                                <color key="tintColor" red="0.1701542721" green="0.44628400260000001" blue="0.12782916559999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </barButtonItem>
+                            <barButtonItem title="Row +" id="CnJ-tH-M7v">
+                                <color key="tintColor" red="0.1701542721" green="0.44628400260000001" blue="0.12782916559999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qxk-bC-fzo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-88" y="1312"/>
         </scene>
         <!--Profile-->
         <scene sceneID="tne-QT-ifu">
@@ -86,6 +115,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="1Ii-BV-UDP" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fDr-I5-svm">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" red="0.17231217030000001" green="0.44624298810000002" blue="0.1253960133" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -116,7 +146,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9kt-A8-4DU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-507.24637681159425" y="576.5625"/>
+            <point key="canvasLocation" x="-1645" y="577"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wC3-Ql-7Le">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hzo-e6-C2y" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rqS-0c-l53">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZDi-pS-wCY" kind="relationship" relationship="rootViewController" id="U5T-cp-7Zd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wb0-Cg-9hA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-842" y="1312"/>
         </scene>
     </scenes>
     <resources>
