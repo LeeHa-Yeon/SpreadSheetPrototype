@@ -76,6 +76,19 @@ class SheetListTableViewController: UITableViewController {
 
 class SheetListCell : UITableViewCell {
     
+    @IBOutlet weak var sheetTitleLabel: UILabel!
+    
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var modifiedUserLabel: UILabel!
+    
+    // awakeFromNib()은 객체가 초기화(인스턴스화)된 후 호출된다.
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    func updateUI() {
+        
+    }
     
 }
 
