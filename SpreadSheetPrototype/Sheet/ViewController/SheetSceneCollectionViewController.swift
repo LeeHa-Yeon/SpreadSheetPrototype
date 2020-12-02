@@ -15,11 +15,14 @@ class SheetSceneCollectionViewController: UICollectionViewController {
     // MARK: - bar button
     // close
     @IBAction func close(_ sender: Any) {
+        
+        // TODO : close 때 내용을 저장할 건지 물어보기
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func save(_ sender: Any) {
-        
+        // TODO : save 때 내용을 저장하는 코드
+        dismiss(animated: true, completion: nil)
     }
 
     // 행, 열 추가하는 코드

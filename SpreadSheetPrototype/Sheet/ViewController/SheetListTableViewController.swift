@@ -8,18 +8,8 @@
 import UIKit
 
 class SheetListTableViewController: UITableViewController {
-    
-    
 
-    
-    // 날짜 한국식으로 표시
-    let formatter: DateFormatter = {
-        let f = DateFormatter()
-        f.dateStyle = .long
-        f.timeStyle = .medium
-        f.locale = Locale(identifier: "Ko_kr")
-        return f
-    }()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +48,11 @@ class SheetListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SheetListCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SheetListCell", for: indexPath) as? SheetListCell else { return UITableViewCell() }
+        // cell.updateUI(sheetList: SheetList[indexPath.row])
+        
+        // cell.updateUI(sheetList: )
+        
 
         return cell
     }
@@ -112,16 +106,29 @@ class SheetListTableViewController: UITableViewController {
 }
 
 class SheetListCell : UITableViewCell {
-
     
-
+    // 날짜 한국식으로 표시
+    let formatter: DateFormatter = {
+        let f = DateFormatter()
+        f.dateStyle = .long
+        f.timeStyle = .medium
+        f.locale = Locale(identifier: "Ko_kr")
+        return f
+    }()
+    
+    @IBOutlet weak var sheetTitleLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var modifiedUser: UILabel!
+    
     // awakeFromNib()은 객체가 초기화(인스턴스화)된 후 호출된다.
     override func awakeFromNib() {
         super.awakeFromNib()
     }
 
-    func updateUI() {
-
+    func updateUI(sheetList : SheetList){
+        sheetTitleLabel.text = sheetList.sheetTitle
+        dateLabel.text = formatter.string(for: sheetList.date)
+        modifiedUser.text = sheetList.lastModifiedUser
     }
 
 }
