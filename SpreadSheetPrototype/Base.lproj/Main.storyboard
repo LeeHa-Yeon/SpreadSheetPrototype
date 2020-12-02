@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -64,7 +65,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="9IV-DZ-7AP">
                             <color key="tintColor" red="0.17231217030000001" green="0.44624298810000002" blue="0.1253960133" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <segue destination="hzo-e6-C2y" kind="presentation" modalPresentationStyle="fullScreen" id="ZAD-iv-sNj"/>
+                                <segue destination="hzo-e6-C2y" kind="presentation" id="ZAD-iv-sNj"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -78,10 +79,42 @@
             <objects>
                 <viewController id="ZDi-pS-wCY" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="36n-o9-qYH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qhm-mu-bVz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewLayout key="collectionViewLayout" id="Y8H-0g-PMd"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sheetCell" id="Ec3-vz-yCd">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5KI-UE-PdM">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cell" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2l-Mj-Pfs">
+                                                    <rect key="frame" x="11" y="15" width="29" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="SDy-6K-aIr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Qhm-mu-bVz" secondAttribute="bottom" id="SSk-nT-EP6"/>
+                            <constraint firstItem="Qhm-mu-bVz" firstAttribute="trailing" secondItem="SDy-6K-aIr" secondAttribute="trailing" id="YYi-or-AzI"/>
+                            <constraint firstItem="Qhm-mu-bVz" firstAttribute="leading" secondItem="SDy-6K-aIr" secondAttribute="leading" id="faX-n5-PJl"/>
+                            <constraint firstItem="Qhm-mu-bVz" firstAttribute="top" secondItem="36n-o9-qYH" secondAttribute="top" id="unJ-4V-d1L"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="new sheet" id="Hd1-AN-uVg">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="5Lc-o7-Sdf"/>
@@ -97,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qxk-bC-fzo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-88" y="1312"/>
+            <point key="canvasLocation" x="-88.405797101449281" y="1311.8303571428571"/>
         </scene>
         <!--Profile-->
         <scene sceneID="tne-QT-ifu">
@@ -160,7 +193,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hzo-e6-C2y" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rqS-0c-l53">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

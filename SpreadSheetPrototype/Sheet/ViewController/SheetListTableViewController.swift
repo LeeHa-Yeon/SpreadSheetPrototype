@@ -9,6 +9,15 @@ import UIKit
 
 class SheetListTableViewController: UITableViewController {
     
+    // 날짜 한국식으로 표시
+    let formatter: DateFormatter = {
+        let f = DateFormatter()
+        f.dateStyle = .long
+        f.timeStyle = .medium
+        f.locale = Locale(identifier: "Ko_kr")
+        return f
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
