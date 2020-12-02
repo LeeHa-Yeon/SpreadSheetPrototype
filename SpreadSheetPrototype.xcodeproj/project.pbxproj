@@ -15,8 +15,9 @@
 		9F82F88925750270001FADB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F82F88725750270001FADB2 /* LaunchScreen.storyboard */; };
 		9F82F89E25769417001FADB2 /* SheetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F82F89D25769417001FADB2 /* SheetList.swift */; };
 		9F82F8A225769423001FADB2 /* Sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F82F8A125769423001FADB2 /* Sheet.swift */; };
-		9F82F8A52576942E001FADB2 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F82F8A42576942E001FADB2 /* Cell.swift */; };
+		9F82F8A52576942E001FADB2 /* SheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F82F8A42576942E001FADB2 /* SheetCell.swift */; };
 		9F82F8A825769944001FADB2 /* SheetListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F82F8A725769944001FADB2 /* SheetListTableViewController.swift */; };
+		9F82F8B02577479D001FADB2 /* SheetSceneCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F82F8AF2577479D001FADB2 /* SheetSceneCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +31,9 @@
 		9F82F88A25750270001FADB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F82F89D25769417001FADB2 /* SheetList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetList.swift; sourceTree = "<group>"; };
 		9F82F8A125769423001FADB2 /* Sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheet.swift; sourceTree = "<group>"; };
-		9F82F8A42576942E001FADB2 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		9F82F8A42576942E001FADB2 /* SheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetCell.swift; sourceTree = "<group>"; };
 		9F82F8A725769944001FADB2 /* SheetListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetListTableViewController.swift; sourceTree = "<group>"; };
+		9F82F8AF2577479D001FADB2 /* SheetSceneCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetSceneCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +93,7 @@
 			children = (
 				9F82F89D25769417001FADB2 /* SheetList.swift */,
 				9F82F8A125769423001FADB2 /* Sheet.swift */,
-				9F82F8A42576942E001FADB2 /* Cell.swift */,
+				9F82F8A42576942E001FADB2 /* SheetCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				9F82F8A725769944001FADB2 /* SheetListTableViewController.swift */,
+				9F82F8AF2577479D001FADB2 /* SheetSceneCollectionViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -186,8 +189,9 @@
 				9F82F8842575026F001FADB2 /* SpreadSheetPrototype.xcdatamodeld in Sources */,
 				9F82F87A2575026F001FADB2 /* AppDelegate.swift in Sources */,
 				9F82F87C2575026F001FADB2 /* SceneDelegate.swift in Sources */,
+				9F82F8B02577479D001FADB2 /* SheetSceneCollectionViewController.swift in Sources */,
 				9F82F89E25769417001FADB2 /* SheetList.swift in Sources */,
-				9F82F8A52576942E001FADB2 /* Cell.swift in Sources */,
+				9F82F8A52576942E001FADB2 /* SheetCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

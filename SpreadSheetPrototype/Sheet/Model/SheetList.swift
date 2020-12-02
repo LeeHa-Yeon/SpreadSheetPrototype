@@ -8,7 +8,7 @@
 import Foundation
 
 
-class SheetList {
+struct SheetList {
     // 시트의 고유아이디 ( 기본키 )
     var sheetId : Int
     var sheetTitle : String
@@ -36,20 +36,3 @@ class SheetList {
     ]
     
 }
-
-
-
-//class Memo {
-//    var content : String
-//    var insertDate : Date
-//
-//    init( content: String) {
-//        self.content = content
-//        insertDate = Date()
-//    }
-//
-//    static var dummyMemoList = [
-//        Memo(content: "Hayeon"),
-//        Memo(content: "Test")
-//    ]
-//}

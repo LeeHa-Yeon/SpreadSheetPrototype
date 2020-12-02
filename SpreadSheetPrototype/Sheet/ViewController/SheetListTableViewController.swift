@@ -9,6 +9,9 @@ import UIKit
 
 class SheetListTableViewController: UITableViewController {
     
+    
+
+    
     // 날짜 한국식으로 표시
     let formatter: DateFormatter = {
         let f = DateFormatter()
@@ -22,6 +25,31 @@ class SheetListTableViewController: UITableViewController {
         super.viewDidLoad()
 
     }
+    
+    // MARK: - 추가시 제목 입력창 띄우기
+    
+    @IBAction func addSheet(_ sender: Any) {
+        let title = "새 스프레드시트"
+        let message = "새 스프레드시트의 이름을 지정하세요."
+                
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel)
+        let okAction = UIAlertAction(title: "만들기", style: .default) { (_) in
+        }
+        alert.addAction(cancelAction)
+        alert.addAction(okAction)
+            
+        alert.addTextField(configurationHandler: { (textfield) in
+            // 텍스트필드 속성
+            //textfield.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+            textfield.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            textfield.placeholder = "파일이름" // 안내메시지
+        })
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    
 
     // MARK: - Table view data source
     
@@ -30,7 +58,7 @@ class SheetListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SheetListCell", for: indexPath) as? SheetListCell else { return UITableViewCell() }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SheetListCell", for: indexPath)
 
         return cell
     }
@@ -84,21 +112,18 @@ class SheetListTableViewController: UITableViewController {
 }
 
 class SheetListCell : UITableViewCell {
+
     
-    @IBOutlet weak var sheetTitleLabel: UILabel!
-    
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var modifiedUserLabel: UILabel!
-    
+
     // awakeFromNib()은 객체가 초기화(인스턴스화)된 후 호출된다.
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
+
     func updateUI() {
-        
+
     }
-    
+
 }
 
 
